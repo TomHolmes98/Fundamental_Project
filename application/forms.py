@@ -5,7 +5,7 @@ from wtforms.validators import DataRequired
 class PlayersForm(FlaskForm):
     name=StringField('Enter Player Name', validators=[DataRequired()])
     nationality=StringField('Enter Player Nationality', validators=[DataRequired()])
-    position=StringField('Enter Player Position', choices=[('GK','LB','CB','RB','CDM','CM','CAM','LM','RM','LW','RW','CF','ST')])
+    position=StringField('Enter Player Position', validators=[DataRequired()])
     submit=SubmitField('Add Player')
 
 class TeamForm(FlaskForm):
