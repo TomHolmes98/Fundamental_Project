@@ -36,8 +36,8 @@ def update(id):
         return redirect(url_for("home"))
     return render_template("update.html", title="Update your team", form=form, team=team)
 
-@app.route("/player/<int:id>",methods=["GET", "POST"])
-def player(id):
+@app.route("/add_player/<int:id>",methods=["GET", "POST"])
+def add_player(id):
     form= PlayersForm()
     if request.method == "POST":
         if form.validate_on_submit():
