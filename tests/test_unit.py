@@ -82,7 +82,7 @@ class TestUpdate(TestBase):
         self.assertIn(b"La Liga", response.data)
 
 class TestDelete(TestBase):
-    def test_update_team(self):
+    def test_delete_team(self):
         response = self.client.get(url_for("delete", id=1),follow_redirects= True)
         self.assertNotIn(b"Manchester United", response.data)
         self.assertNotIn(b"Premier League", response.data)

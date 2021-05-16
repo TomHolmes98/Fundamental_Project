@@ -40,3 +40,25 @@ class TestBase(LiveServerTestCase):
         response = urlopen(f'http://localhost:{self.TEST_PORT}')
         self.assertEqual(response.code, 200)
 
+class TestHomepage(TestBase):
+    def test_homepage(self):
+        self.driver.get(f"http://localhost:{self.TEST_PORT}")
+        fantasy_teams_title = self.driver.find_element_by_xpath('/html/body/h2').text
+        self.assertIn('Fantasy Teams', fantasy_teams_title)
+
+class TestAddTeam(TestBase):
+    TEST_CASES = [("Manchester United","Premier League"), ("Real Madrid","La Liga"), ("Liverpool","Premier League")]
+   
+    def submit_input(self, name, league):
+        self.driver.find_element_by_xpath('//*[@id="name"]').send_keys(name)
+        self.driver.find_element_by_xpath('//*[@id="league"]').send_keys(league)
+        self.driver.find_element_by_xpath('//*[@id="submit"]').click()
+
+class TestAddPlayer(TestBase):
+    TEST_CASES = [("Wayne Rooney", "English", "ST"), ("Joe Hart", "English", "GK"), ("Lionel Messi", "Argentinian", "RW")]
+
+    def submit_input(self, name, nationality, position):
+        self.driver.find_element_by_xpath('//*[@id="name"]').send_keys(name)
+        self.driver.find_element_by_xpath('//*[@id="league"]').send_keys(nationality)
+        self.driver.find_element_by_xpath('//*[@id="league"]').send_keys(position)
+        self.driver.find_element_by_xpath('//*[@id="submit"]').click()
