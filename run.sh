@@ -11,6 +11,6 @@ source ./venv/bin/activate
 pip3 install -r requirements.txt
 pip3 install -r requirements2.txt
 export DATABASE_URI
-export SECRET_KEY
+export SECRET
 
 python3 -m pytest --junitxml=junit/test-results.xml --cov=application --cov-report=xml --cov-report=html
