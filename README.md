@@ -46,15 +46,21 @@ This proposal showed potential to be able to execute the proposed CRUD functiona
 
 The ERD that I created for my project shows the relationship between both teams and players and shows how a team can have many diferent players and for this to work in terms of using a primary key and a foreign key, the foreign key must be stored within the players table.
 
-![](https://gyazo.com/ef515549cd5f4b0ffa164bce5196e63f)
+[![Image from Gyazo](https://i.gyazo.com/ef515549cd5f4b0ffa164bce5196e63f.png)](https://gyazo.com/ef515549cd5f4b0ffa164bce5196e63f)
 
 ### Risk Assessment
 
 Below are 2 versions of my risk assessment, the first one being an initial risk assessment and the 2nd being a follow up in which the impact levels and likeliness have been edited to show the impact having a risk assessment has made in ensuring that I am cautious of any potential risks.
 
+[![Image from Gyazo](https://i.gyazo.com/a8a85131aa668b1dc3170ba66db138b0.png)](https://gyazo.com/a8a85131aa668b1dc3170ba66db138b0)
+
+[![Image from Gyazo](https://i.gyazo.com/976cc7a085e013f6dc1093f93d8eddf9.png)](https://gyazo.com/976cc7a085e013f6dc1093f93d8eddf9)
+
 ### Trello
 
 I used Trello in order to track my project, in terms of using the AGILE planning method, Trello was very useful in keeping me on schedule and it also allowed me to refine my objectives over time and branch them out into more detailed sub classes within the Trello. Using Trello to track my project allowed me to identify what the project required each step of the way.
+
+[![Image from Gyazo](https://i.gyazo.com/ecc276c01173ef36e81b431bb4d3930d.png)](https://gyazo.com/ecc276c01173ef36e81b431bb4d3930d)
 
 ### Continuous Integration
 
@@ -98,7 +104,19 @@ Unit testing was carried out to ensure that the routes contained within the appl
 
 Integration testing was also carried out within this project, this testing focused upon testing the functionality of the entire application build, meaning the database, frontend and backend. Currently my integration tests cover the homepage and what should show up there, I also wrote tests querying the add-player section of my app and also the add-team section of my app.
 
+[![Image from Gyazo](https://i.gyazo.com/f2aca0c02274095da9b4780d9a32fbe3.png)](https://gyazo.com/f2aca0c02274095da9b4780d9a32fbe3)
+
+[![Image from Gyazo](https://i.gyazo.com/460dd31e3a896590e8b39b2d2e4b4be2.png)](https://gyazo.com/460dd31e3a896590e8b39b2d2e4b4be2)
+
 ## Working Product
+
+[![Image from Gyazo](https://i.gyazo.com/24e50119722435e6a036da520dca8312.png)](https://gyazo.com/24e50119722435e6a036da520dca8312)
+
+[![Image from Gyazo](https://i.gyazo.com/abb5b36bf16c8396106cb170b203493d.png)](https://gyazo.com/abb5b36bf16c8396106cb170b203493d)
+
+[![Image from Gyazo](https://i.gyazo.com/8efe87d0e2406e533a309da7ae89d6a0.png)](https://gyazo.com/8efe87d0e2406e533a309da7ae89d6a0)
+
+
 
 
 
