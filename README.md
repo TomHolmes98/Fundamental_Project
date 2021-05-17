@@ -9,7 +9,12 @@
     * [Entity-Relationship Diagram(ERD)](#entity-relationship-diagram(erd))
     * [Risk Assessment](#risk-assessment)
     * [Trello](#trello)
+    * [Continuous Integration](#continuous-integration)
 * [Development](#development)
+    * [Testing](#testing)
+        * [Unit Testing](#unit-testing)
+* [Working Product](#working-product)
+
 * [Footer](#footer)
 
 ## Introduction
@@ -41,6 +46,8 @@ This proposal showed potential to be able to execute the proposed CRUD functiona
 
 The ERD that I created for my project shows the relationship between both teams and players and shows how a team can have many diferent players and for this to work in terms of using a primary key and a foreign key, the foreign key must be stored within the players table.
 
+![](https://gyazo.com/ef515549cd5f4b0ffa164bce5196e63f)
+
 ### Risk Assessment
 
 Below are 2 versions of my risk assessment, the first one being an initial risk assessment and the 2nd being a follow up in which the impact levels and likeliness have been edited to show the impact having a risk assessment has made in ensuring that I am cautious of any potential risks.
@@ -48,6 +55,50 @@ Below are 2 versions of my risk assessment, the first one being an initial risk 
 ### Trello
 
 I used Trello in order to track my project, in terms of using the AGILE planning method, Trello was very useful in keeping me on schedule and it also allowed me to refine my objectives over time and branch them out into more detailed sub classes within the Trello. Using Trello to track my project allowed me to identify what the project required each step of the way.
+
+### Continuous Integration
+
+Jenkins is used within my project in order for continuous integration to occur. A webhook has been set up which means that any changes made within the GitHub repository are then mirrored in the Jenkins program. Jenkins runs automated tests within the program and has been set up in order to proivde coverage reports of the application.
+
+Below are the instructions I have given to Jenkins in order to create a virtual environment, followed by installing the needed requirements and then Jenkins is issued with instructions to both unit test and integration test and then provide a coverage report as aforementioned.
+
+```
+
+#!/bin/bash
+
+sudo apt update 
+sudo apt install python3 python3-pytest python3-pip python3-venv chromium-browser wget unzip -y
+wget https://chromedriver.storage.googleapis.com/90.0.4430.24/chromedriver_linux64.zip
+sudo unzip chromedriver_linux64.zip -d /usr/bin
+rm chromedriver_linux64.zip
+
+python3 -m venv venv
+
+source venv/bin/activate
+pip install pytest-cov
+pip3 install -r requirements.txt
+pip3 install -r requirements2.txt
+export DATABASE_URI
+export SECRET
+
+python3 -m pytest --junitxml=junit/test-results.xml --cov=application --cov-report=xml --cov-report=html
+
+```
+
+
+## Development
+
+### Testing
+
+#### Unit Testing
+
+Unit testing was carried out to ensure that the routes contained within the application were efficiently practicing the CRUD functionality and specifically that, under different circumstances, the routes would not fail. Examples of the unit testing that I carried out within this project are shown below.
+
+#### Integration Testing
+
+Integration testing was also carried out within this project, this testing focused upon testing the functionality of the entire application build, meaning the database, frontend and backend. Currently my integration tests cover the homepage and what should show up there, I also wrote tests querying the add-player section of my app and also the add-team section of my app.
+
+## Working Product
 
 
 
