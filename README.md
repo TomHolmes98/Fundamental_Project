@@ -68,6 +68,8 @@ Jenkins is used within my project in order for continuous integration to occur. 
 
 Below are the instructions I have given to Jenkins in order to create a virtual environment, followed by installing the needed requirements and then Jenkins is issued with instructions to both unit test and integration test and then provide a coverage report as aforementioned.
 
+[![Image from Gyazo](https://i.gyazo.com/51f835ef458ca9aae8e1794cd4302983.png)](https://gyazo.com/51f835ef458ca9aae8e1794cd4302983)
+
 ```
 
 #!/bin/bash
